@@ -19,6 +19,11 @@ wandb:
   project: 2026-01-29
   mode: online
 
+model:
+  name: null
+  precision: bf16
+  max_new_tokens: 128
+
 dataset:
   name: RealToxicityPrompts
   max_items: 2000
