@@ -1,0 +1,7 @@
+{
+  "lambda_legality_vs_utility": 0.6,
+  "proxy_disagreement_weight": 0.6,
+  "near_threshold_band": 0.03,
+  "legality_fraction": 0.6,
+  "grid_points": 401
+}
