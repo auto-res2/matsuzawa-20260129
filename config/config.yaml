@@ -20,6 +20,7 @@ wandb:
   mode: online
 
 model:
+  name: Mistral-7B-v0.3 (7.3B parameters)
   precision: bf16
   max_new_tokens: 128
 
