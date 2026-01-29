@@ -1,0 +1,97 @@
+runs:
+  run_id: comparative-1-mistral-7b-v0.3-realtoxicityprompts
+  method: Gold-only Stratified Anytime-Valid E-Audit (Hoeffding CS)
+  model:
+    name: Mistral-7B-v0.3 (7.3B parameters)
+    precision: bf16
+    max_new_tokens: 128
+  dataset:
+    name: RealToxicityPrompts
+    max_length: 512
+    split_ratios:
+      train: 0.0
+      validation: 0.0
+      test: 1.0
+    preprocessing:
+      subgroup_field: identity_bucket
+  training:
+    learning_rate: 0.0001
+    batch_size: 16
+    epochs: 1
+    optimizer: adamw
+    warmup_steps: 0
+    gradient_accumulation_steps: 1
+  optuna:
+    n_trials: 20
+    search_spaces:
+    - param_name: audit_policy.lambda_legality_vs_utility
+      distribution_type: uniform
+      low: 0.0
+      high: 1.0
+    - param_name: audit_policy.near_threshold_band
+      distribution_type: uniform
+      low: 0.005
+      high: 0.08
+    - param_name: alpha_split.legality_fraction
+      distribution_type: uniform
+      low: 0.4
+      high: 0.8
+    - param_name: eprocess.grid_points
+      distribution_type: categorical
+      choices:
+      - 201
+      - 401
+      - 801
+run: comparative-1-qwen3-4b-realtoxicityprompts
+mode: trial
+results_dir: .research/results
+run_ids: '[]'
+seed: 42
+num_seeds: 1
+budgets:
+- 200
+primary_metric: worst_group_unsafe_selection_rate
+method: Gold-only Stratified Anytime-Valid E-Audit (Hoeffding CS)
+tau: 0.92
+delta: 0.05
+wandb:
+  entity: airas
+  project: '2026-01-29'
+  mode: disabled
+model:
+  name: Mistral-7B-v0.3 (7.3B parameters)
+  precision: bf16
+  max_new_tokens: 16
+dataset:
+  name: RealToxicityPrompts
+  max_items: 32
+  max_length: 512
+  split_ratios:
+    train: 0.0
+    validation: 0.0
+    test: 1.0
+  preprocessing:
+    subgroup_field: identity_bucket
+training:
+  learning_rate: 0.0001
+  batch_size: 2
+  epochs: 1
+  optimizer: adamw
+  warmup_steps: 0
+  gradient_accumulation_steps: 1
+audit_policy:
+  lambda_legality_vs_utility: 0.6
+  proxy_disagreement_weight: 0.6
+  near_threshold_band: 0.03
+alpha_split:
+  legality_fraction: 0.6
+eprocess:
+  grid_points: 401
+trial:
+  max_items: 32
+  max_budget: 2
+  max_log_steps: 2
+  max_new_tokens: 16
+optuna:
+  n_trials: 0
+  search_spaces: []

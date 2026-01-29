@@ -51,3 +51,53 @@
 [2026-01-29 09:10:16,223][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/generation_config.json "HTTP/1.1 200 OK"
 === [TRIAL RUN] PASSED for comparative-1-mistral-7b-v0.3-realtoxicityprompts at Thu Jan 29 09:10:47 UTC 2026 ===
 
+=== [UV SYNC] Start at Thu Jan 29 09:11:26 UTC 2026 ===
+=== [UV SYNC] Finished successfully at Thu Jan 29 09:11:27 UTC 2026 ===
+=== [TRIAL RUN] Start for comparative-1-qwen3-4b-realtoxicityprompts at Thu Jan 29 09:11:27 UTC 2026 ===
+[2026-01-29 09:11:38,548][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/allenai/real-toxicity-prompts/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[2026-01-29 09:11:38,560][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/allenai/real-toxicity-prompts/f21629712ffd6a3d13a54fd2807ccd521c55ef74/README.md "HTTP/1.1 200 OK"
+[2026-01-29 09:11:38,744][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/allenai/real-toxicity-prompts/resolve/f21629712ffd6a3d13a54fd2807ccd521c55ef74/real-toxicity-prompts.py "HTTP/1.1 404 Not Found"
+[2026-01-29 09:11:39,302][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/allenai/real-toxicity-prompts/allenai/real-toxicity-prompts.py "HTTP/1.1 404 Not Found"
+[2026-01-29 09:11:41,018][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/allenai/real-toxicity-prompts/revision/f21629712ffd6a3d13a54fd2807ccd521c55ef74 "HTTP/1.1 200 OK"
+[2026-01-29 09:11:41,203][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/allenai/real-toxicity-prompts/resolve/f21629712ffd6a3d13a54fd2807ccd521c55ef74/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-01-29 09:11:41,450][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=allenai/real-toxicity-prompts "HTTP/1.1 200 OK"
+[2026-01-29 09:11:41,658][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/allenai/real-toxicity-prompts/tree/f21629712ffd6a3d13a54fd2807ccd521c55ef74/data?recursive=true&expand=false "HTTP/1.1 404 Not Found"
+[2026-01-29 09:11:41,980][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/allenai/real-toxicity-prompts/tree/f21629712ffd6a3d13a54fd2807ccd521c55ef74?recursive=false&expand=false "HTTP/1.1 200 OK"
+[2026-01-29 09:11:42,222][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/allenai/real-toxicity-prompts/resolve/f21629712ffd6a3d13a54fd2807ccd521c55ef74/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-01-29 09:11:42,896][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-01-29 09:11:42,905][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/config.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:42,915][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/config.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:43,107][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-01-29 09:11:43,117][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/tokenizer_config.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:43,128][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/tokenizer_config.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:43,315][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-01-29 09:11:43,335][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/tokenizer_config.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:43,559][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/models/mistralai/Mistral-7B-v0.3/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[2026-01-29 09:11:43,747][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/models/mistralai/Mistral-7B-v0.3/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[2026-01-29 09:11:43,940][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+[2026-01-29 09:11:43,950][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/tokenizer.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:43,961][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/tokenizer.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:44,179][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/tokenizer.model "HTTP/1.1 302 Found"
+[2026-01-29 09:11:44,374][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/models/mistralai/Mistral-7B-v0.3/xet-read-token/caa1feb0e54d415e2df31207e5f4e273e33509b1 "HTTP/1.1 200 OK"
+[2026-01-29 09:11:45,543][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/added_tokens.json "HTTP/1.1 404 Not Found"
+[2026-01-29 09:11:45,727][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
+[2026-01-29 09:11:45,728][huggingface_hub.utils._http][WARNING] - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[2026-01-29 09:11:45,737][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/special_tokens_map.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:45,748][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/special_tokens_map.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:45,966][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+[2026-01-29 09:11:46,381][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-01-29 09:11:46,391][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/config.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:46,392][transformers.configuration_utils][WARNING] - `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-01-29 09:11:50,853][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+[2026-01-29 09:11:51,090][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+[2026-01-29 09:11:51,100][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/model.safetensors.index.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:51,112][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/model.safetensors.index.json "HTTP/1.1 200 OK"
+[2026-01-29 09:11:51,298][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/models/mistralai/Mistral-7B-v0.3/revision/main "HTTP/1.1 200 OK"
+[2026-01-29 09:11:51,480][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/caa1feb0e54d415e2df31207e5f4e273e33509b1/model-00002-of-00003.safetensors "HTTP/1.1 302 Found"
+[2026-01-29 09:11:51,502][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/caa1feb0e54d415e2df31207e5f4e273e33509b1/model-00003-of-00003.safetensors "HTTP/1.1 302 Found"
+[2026-01-29 09:11:51,504][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/caa1feb0e54d415e2df31207e5f4e273e33509b1/model-00001-of-00003.safetensors "HTTP/1.1 302 Found"
+[2026-01-29 09:12:07,820][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/mistralai/Mistral-7B-v0.3/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-01-29 09:12:07,830][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/generation_config.json "HTTP/1.1 200 OK"
+[2026-01-29 09:12:07,839][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/mistralai/Mistral-7B-v0.3/caa1feb0e54d415e2df31207e5f4e273e33509b1/generation_config.json "HTTP/1.1 200 OK"
+=== [TRIAL RUN] PASSED for comparative-1-qwen3-4b-realtoxicityprompts at Thu Jan 29 09:12:38 UTC 2026 ===
+
