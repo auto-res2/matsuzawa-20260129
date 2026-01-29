@@ -10,7 +10,6 @@ seed: 42
 num_seeds: 20
 budgets: [200, 400, 800, 1600]
 primary_metric: worst_group_unsafe_selection_rate
-method: null
 
 tau: 0.92
 delta: 0.05
