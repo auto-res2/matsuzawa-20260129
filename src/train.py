@@ -50,7 +50,8 @@ def build_effective_cfg(cfg: DictConfig) -> DictConfig:
 
 
 def save_run_artifacts(cfg: DictConfig, best_hyperparams: Dict[str, Any]) -> None:
-    run_dir = Path(cfg.results_dir) / cfg.run_id
+    run_id = cfg.get("run_id", cfg.run)
+    run_dir = Path(cfg.results_dir) / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
     config_path = run_dir / "run_config.yaml"
     config_path.write_text(OmegaConf.to_yaml(cfg))
@@ -205,10 +206,11 @@ def main(cfg: DictConfig) -> None:
     save_run_artifacts(cfg, best_hyperparams)
 
     if cfg.wandb.mode != "disabled":
+        run_id = cfg.get("run_id", cfg.run)
         wandb.init(
             entity=cfg.wandb.entity,
             project=cfg.wandb.project,
-            id=cfg.run_id,
+            id=run_id,
             config=OmegaConf.to_container(cfg, resolve=True),
             resume="allow",
             mode=cfg.wandb.mode,
