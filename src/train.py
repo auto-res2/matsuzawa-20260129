@@ -44,9 +44,9 @@ def adjust_cfg_for_mode(cfg: DictConfig) -> None:
 
 
 def build_effective_cfg(cfg: DictConfig) -> DictConfig:
-    merged = OmegaConf.merge(cfg, cfg.runs)
-    adjust_cfg_for_mode(merged)
-    return merged
+    # The runs config is already merged by Hydra's defaults system
+    adjust_cfg_for_mode(cfg)
+    return cfg
 
 
 def save_run_artifacts(cfg: DictConfig, best_hyperparams: Dict[str, Any]) -> None:

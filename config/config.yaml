@@ -2,6 +2,7 @@ defaults:
   - runs: comparative-1-mistral-7b-v0.3-realtoxicityprompts
   - _self_
 
+run: comparative-1-mistral-7b-v0.3-realtoxicityprompts
 mode: full
 results_dir: results
 run_ids: "[]"
