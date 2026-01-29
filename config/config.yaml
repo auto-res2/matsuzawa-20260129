@@ -20,7 +20,6 @@ wandb:
   mode: online
 
 model:
-  name: null
   precision: bf16
   max_new_tokens: 128
 
