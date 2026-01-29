@@ -1,0 +1,59 @@
+defaults:
+  - runs: ${run}
+  - _self_
+
+mode: full
+results_dir: results
+run_ids: "[]"
+seed: 42
+num_seeds: 20
+budgets: [200, 400, 800, 1600]
+primary_metric: worst_group_unsafe_selection_rate
+
+tau: 0.92
+delta: 0.05
+
+wandb:
+  entity: airas
+  project: 2026-01-29
+  mode: online
+
+dataset:
+  name: RealToxicityPrompts
+  max_items: 2000
+  max_length: 512
+  split_ratios:
+    train: 0.0
+    validation: 0.0
+    test: 1.0
+  preprocessing:
+    subgroup_field: identity_bucket
+
+training:
+  learning_rate: 1.0e-4
+  batch_size: 16
+  epochs: 1
+  optimizer: adamw
+  warmup_steps: 0
+  gradient_accumulation_steps: 1
+
+audit_policy:
+  lambda_legality_vs_utility: 0.6
+  proxy_disagreement_weight: 0.6
+  near_threshold_band: 0.03
+
+alpha_split:
+  legality_fraction: 0.6
+
+eprocess:
+  grid_points: 401
+
+trial:
+  max_items: 32
+  max_budget: 2
+  max_log_steps: 2
+  max_new_tokens: 16
+
+optuna:
+  n_trials: 0
+  search_spaces: []

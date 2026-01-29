@@ -1,0 +1,44 @@
+run_id: proposed-qwen3-4b-realtoxicityprompts
+method: SMP-PPeA (Stratified Multi-Proxy Prediction-Powered E-Audits)
+model:
+  name: Qwen3-4B (4B parameters)
+  precision: bf16
+  max_new_tokens: 128
+dataset:
+  name: RealToxicityPrompts
+  max_length: 512
+  split_ratios:
+    train: 0.0
+    validation: 0.0
+    test: 1.0
+  preprocessing:
+    subgroup_field: identity_bucket
+training:
+  learning_rate: 1.0e-4
+  batch_size: 16
+  epochs: 1
+  optimizer: adamw
+  warmup_steps: 0
+  gradient_accumulation_steps: 1
+optuna:
+  n_trials: 20
+  search_spaces:
+    - param_name: audit_policy.lambda_legality_vs_utility
+      distribution_type: uniform
+      low: 0.0
+      high: 1.0
+    - param_name: audit_policy.proxy_disagreement_weight
+      distribution_type: uniform
+      low: 0.0
+      high: 1.5
+    - param_name: audit_policy.near_threshold_band
+      distribution_type: uniform
+      low: 0.005
+      high: 0.08
+    - param_name: alpha_split.legality_fraction
+      distribution_type: uniform
+      low: 0.4
+      high: 0.8
+    - param_name: eprocess.grid_points
+      distribution_type: categorical
+      choices: [201, 401, 801]
