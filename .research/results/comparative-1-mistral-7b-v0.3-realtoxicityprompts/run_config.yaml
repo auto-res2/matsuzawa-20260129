@@ -43,13 +43,16 @@ runs:
       - 401
       - 801
 run: comparative-1-mistral-7b-v0.3-realtoxicityprompts
-mode: trial
+mode: full
 results_dir: .research/results
 run_ids: '[]'
 seed: 42
-num_seeds: 1
+num_seeds: 20
 budgets:
 - 200
+- 400
+- 800
+- 1600
 primary_metric: worst_group_unsafe_selection_rate
 method: Gold-only Stratified Anytime-Valid E-Audit (Hoeffding CS)
 tau: 0.92
@@ -57,14 +60,14 @@ delta: 0.05
 wandb:
   entity: airas
   project: '2026-01-29'
-  mode: disabled
+  mode: online
 model:
   name: Mistral-7B-v0.3 (7.3B parameters)
   precision: bf16
-  max_new_tokens: 16
+  max_new_tokens: 128
 dataset:
   name: RealToxicityPrompts
-  max_items: 32
+  max_items: 2000
   max_length: 512
   split_ratios:
     train: 0.0
@@ -74,7 +77,7 @@ dataset:
     subgroup_field: identity_bucket
 training:
   learning_rate: 0.0001
-  batch_size: 2
+  batch_size: 16
   epochs: 1
   optimizer: adamw
   warmup_steps: 0
