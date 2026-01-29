@@ -1,5 +1,5 @@
 defaults:
-  - runs: ???
+  - runs: comparative-1-mistral-7b-v0.3-realtoxicityprompts
   - _self_
 
 mode: full
