@@ -334,10 +334,10 @@ class AuditSimulator:
                 diffU2[s].append(x - float(self.tU2[s, i]))
 
         steps = min(budget - B0, max_steps) if max_steps is not None else budget - B0
+        lcb_minL = torch.zeros(self.S, dtype=torch.float32)
+        lcb_U = torch.zeros(self.S, dtype=torch.float32)
+        binding_group = torch.zeros(self.S, dtype=torch.long)
         for _ in range(max(0, steps)):
-            lcb_minL = torch.zeros(self.S, dtype=torch.float32)
-            lcb_U = torch.zeros(self.S, dtype=torch.float32)
-            binding_group = torch.zeros(self.S, dtype=torch.long)
 
             legality_fraction = float(hyperparams.get("alpha_split.legality_fraction", 0.6))
             grid_points = int(hyperparams.get("eprocess.grid_points", 401))
