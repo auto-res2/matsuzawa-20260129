@@ -43,6 +43,7 @@ class LLMGenerator:
             self.tokenizer = AutoTokenizer.from_pretrained(model_id, cache_dir=".cache/")
         except Exception as exc:
             raise RuntimeError(f"Failed to load tokenizer {model_id}: {exc}") from exc
+        self.tokenizer.padding_side = 'left'
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
         assert self.tokenizer.pad_token_id is not None

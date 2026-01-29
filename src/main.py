@@ -15,6 +15,7 @@ def main(cfg: DictConfig) -> None:
         "src.train",
         f"results_dir={cfg.results_dir}",
         f"mode={cfg.mode}",
+        f"run={cfg.run}",
     ]
     env = os.environ.copy()
     env["HYDRA_FULL_ERROR"] = "1"
