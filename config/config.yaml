@@ -1,5 +1,5 @@
 defaults:
-  - runs: ${run}
+  - runs: ???
   - _self_
 
 mode: full
